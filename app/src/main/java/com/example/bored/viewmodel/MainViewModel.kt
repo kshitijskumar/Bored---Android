@@ -1,6 +1,6 @@
 package com.example.bored.viewmodel
 
-import androidx.fragment.app.FragmentActivity
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.bored.source.repository.MainRepository
 import com.example.bored.source.responses.ActivityResponse
@@ -33,6 +33,10 @@ class MainViewModel(
                 _uiState.value = Result.Idle
             }
         }
+    }
+
+    init {
+        getRandomActivity()
     }
 
     companion object {
